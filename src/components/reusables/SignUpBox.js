@@ -85,11 +85,7 @@ function SignUpBox() {
 
 
 
-            {/* <div>
-                <input placeholder="username" type="text" onChange={changeHandler} name="username" value={customer.username} />
-                <input placeholder="Password" type="password" onChange={changeHandler} name="password" value={customer.password} />
-                <button onClick={submitHandler}>Submit</button>
-            </div> */}
+            
 
 
 
@@ -106,6 +102,7 @@ const HeaderStyle = {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundColor: "white"
 }
 
 export default SignUpBox
