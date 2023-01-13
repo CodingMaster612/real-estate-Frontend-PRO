@@ -1,8 +1,12 @@
-import '../../css/signUp.css';
+import '../../css/addProperty.css';
 
 
 
-function signUp() {
+
+
+
+
+function addProperty() {
     return (
         <header style={HeaderStyle}>
             <div>
@@ -19,5 +23,7 @@ const HeaderStyle = {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+
+
 }
-export default signUp;
+export default addProperty;

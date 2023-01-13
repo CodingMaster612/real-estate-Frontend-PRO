@@ -1,14 +1,25 @@
-
+import '../../css/Home.css';
 
 
 
 function Home() {
     return (
-      <div>
-        
-      </div>
-      
+        <header style={HeaderStyle}>
+            <div>
+
+            </div>
+        </header>
+
     );
-  }
-  
-  export default Home;
+}
+const HeaderStyle = {
+    width: "100%",
+    height: "100vh",
+    // background: `url(${BackgroundImage})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+
+
+}
+export default Home;

@@ -1,8 +1,8 @@
-import '../../css/signUp.css';
+import '../../css/viewProperty.css';
 
 
 
-function signUp() {
+function View() {
     return (
         <header style={HeaderStyle}>
             <div>
@@ -20,4 +20,4 @@ const HeaderStyle = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
 }
-export default signUp;
+export default View;
