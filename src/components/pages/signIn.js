@@ -1,11 +1,13 @@
-import '../../css/signIn.css';
+import React from 'react'
+import SignInBox from '../reusables/SignInBox.js'
+
 
 
 function signIn() {
     return (
         <header style={HeaderStyle}>
             <div>
-
+                <SignInBox/>
             </div>
         </header>
 

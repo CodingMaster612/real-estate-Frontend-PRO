@@ -1,4 +1,4 @@
-import '../../css/Home.css';
+import '../../css/reusables/Home.css'
 
 
 

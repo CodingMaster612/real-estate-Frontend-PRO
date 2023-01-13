@@ -1,4 +1,5 @@
-import '../../css/signUp.css';
+import React from 'react'
+import SignUpBox from '../reusables/SignUpBox'
 
 
 
@@ -6,7 +7,7 @@ function signUp() {
     return (
         <header style={HeaderStyle}>
             <div>
-
+            <SignUpBox />
             </div>
         </header>
 

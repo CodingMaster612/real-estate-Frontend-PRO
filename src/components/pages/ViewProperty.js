@@ -1,5 +1,4 @@
-import '../../css/viewProperty.css';
-
+import '../../css/reusables/viewProperty.css'
 
 
 function View() {

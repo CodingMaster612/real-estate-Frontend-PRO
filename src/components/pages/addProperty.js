@@ -1,4 +1,4 @@
-import '../../css/addProperty.css';
+import '../../css/reusables/addProperty.css';
 
 
 
