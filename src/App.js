@@ -17,7 +17,7 @@ function App() {
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path ="/addProperty" element={<AddProperty />} />
-          <Route path="viewProperty" element={<ViewProperty />} />
+          <Route path="/viewProperty" element={<ViewProperty />} />
         </Routes>
       </BrowserRouter>
     </div>

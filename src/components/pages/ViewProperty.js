@@ -1,11 +1,12 @@
-import '../../css/reusables/viewProperty.css'
+import ViewBox from '../reusables/ViewBox'
+import React from 'react'
 
 
 function View() {
     return (
         <header style={HeaderStyle}>
             <div>
-
+            <ViewBox/>
             </div>
         </header>
 
