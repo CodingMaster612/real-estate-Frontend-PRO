@@ -1,4 +1,5 @@
-import '../../css/reusables/addProperty.css';
+import React from 'react'
+import AddPropertyBox from '../reusables/addPropertyBox.js'
 
 
 
@@ -10,7 +11,7 @@ function addProperty() {
     return (
         <header style={HeaderStyle}>
             <div>
-
+                <AddPropertyBox/>
             </div>
         </header>
 
