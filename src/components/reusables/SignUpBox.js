@@ -38,33 +38,12 @@ function SignUpBox() {
     }
 
     return (
-        <div class="box">
-        <div class="box-content flex-col margin-center">
-            
-            <div>
-                <div class="flex-col">
-                    <div class="flex-row">
-                        
-                        <div class="arrow">&</div>
-                        
-                    </div>
-                    <div className='flex-row'>
-                        <div class="box-input">
-                            <input placeholder="username" type="text" onChange={changeHandler} name="username" value={customer.username} />
-                        </div>
-                        
-                        
-                    </div>
-                    <div className='flex-row'>
-                        <div class="box-input">
-                            <input placeholder="Password" type="password" onChange={changeHandler} name="password" value={customer.password} />
-                        </div>
-                    </div>
-                    <button class="result-button" onClick={submitHandler}>Submit</button>
-                </div>
-            </div>
+        <div>
+            <input placeholder="username" type="text" onChange={changeHandler} name="username" value={customer.username} />
+            <input placeholder="Password" type="password" onChange={changeHandler} name="password" value={customer.password} />
+            <button onClick={submitHandler}>Submit</button>
         </div>
-    </div>  
+
     )
 }
 

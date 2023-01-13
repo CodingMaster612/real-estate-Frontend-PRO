@@ -32,8 +32,10 @@ function SignInBox() {
     }
 
     return (
-        <div> 
-
+        <div>
+            <input placeholder="username" type="text" onChange={changeHandler} name="username" value={customer.username} />
+            <input placeholder="Password" type="password" onChange={changeHandler} name="password" value={customer.password} />
+            <button onClick={submitHandler}>Submit</button>
         </div>
     )
 }
