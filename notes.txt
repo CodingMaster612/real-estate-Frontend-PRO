@@ -1,0 +1,10 @@
+1. set up buy axios call
+2. set up button and css to submit axios call 
+
+3. setup view all axios call to view all property
+4. setup axios call to view property_id to certain customers and display on screen
+
+
+
+//to do
+ make a page to buy property  using a button and inputs, make an axios post call to buy property using `` tags and ${propertyId}/ ${customerId}

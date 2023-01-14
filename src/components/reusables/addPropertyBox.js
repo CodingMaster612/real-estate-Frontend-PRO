@@ -34,7 +34,6 @@ function AddPropertyBox() {
             .then((response) => {
                 // Logically do what you gotta do
                 console.log(response.data)
-                localStorage.setItem("propertyListing", response.data.propertyListing)
 
                 alert("Property created successfully")
             }).catch((e) => {
