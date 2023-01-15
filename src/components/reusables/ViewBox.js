@@ -5,19 +5,24 @@ function ViewBox() {
 
     // useState variable
 
-  const [user, setUser] = useState({})
-  const [filters, setFilters] = useState({
-    year: null,
-    make: null,
-    model: null
+  const [property, setProperty] = useState({
+    contact: "",
+    images: "",
+    pasted: "",
+    price: "",
+    size: "",
+    location: "",
+    date: "",
+    discounted: ""
   })
   
-  useEffect(function() {
-    const email = localStorage.getItem("studentEmail")
+  
+  useEffect(function(property) {
+   
 
-    axios.get(`http://localhost:8080/getStudentByEmail/${email}`)
+    axios.post("http://localhost:8081/property/viewAll", property)
     .then(function(response) {
-        setUser(response.data)
+        setProperty(response.data)
     })
     .catch((e) => {
       console.log(e)
@@ -30,7 +35,10 @@ function ViewBox() {
         <header style={HeaderStyle}>
           
 
-        This is a place holder
+        {property.location}
+        {property.contact}
+        {property.price}
+        {property.size}
 
 
             

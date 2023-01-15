@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+
 import '../../css/reusables/addProperty.css'
 
 
 function AddPropertyBox() {
-
     const [agent, setAgent] = useState({
         contact: "",
         images: "",
@@ -32,8 +32,13 @@ function AddPropertyBox() {
 
         axios.post("http://localhost:8081/agent/createProperty", agent)
             .then((response) => {
-                // Logically do what you gotta do
-                console.log(response.data)
+
+               
+               
+               localStorage.setItem("Credentials", JSON.stringify(agent))
+               
+
+               console.log(response.data)
 
                 alert("Property created successfully")
             }).catch((e) => {
