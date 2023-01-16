@@ -3,7 +3,6 @@ import React, { useState ,useEffect } from 'react'
 
 function ViewBox() {
 
-    // useState variable
 
   const [property, setProperty] = useState({
     contact: "",
@@ -17,10 +16,10 @@ function ViewBox() {
   })
   
   
-  useEffect(function(property) {
+  useEffect(function(contact) {
    
-
-    axios.post("http://localhost:8081/property/viewAll", property)
+    
+    axios.get(`http://localhost:8081/property/viewAll`)
     .then(function(response) {
         setProperty(response.data)
     })
@@ -35,11 +34,8 @@ function ViewBox() {
         <header style={HeaderStyle}>
           
 
-        {property.location}
-        {property.contact}
-        {property.price}
-        {property.size}
-
+        
+            <h3>{property.contact}</h3>
 
             
 
