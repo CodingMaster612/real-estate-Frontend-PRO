@@ -18,8 +18,8 @@ function BuyProductBox() {
     }
 
     const submitHandler = () => {
-        const propertyId = 1;
-        const customerId = 1;
+        const propertyId=2;
+        const customerId=1;
         axios.post(`http://localhost:8081/customer/purchase/${propertyId}/${customerId}`, customer)
         .then((response) => {
             // Logically do what you gotta do
