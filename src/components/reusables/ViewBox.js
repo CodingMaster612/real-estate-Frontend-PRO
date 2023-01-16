@@ -5,7 +5,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import '../../css/reusables/viewProperty.css'
-
+import BuyProductBox from'../reusables/BuyProperty.js'
 function ViewBox() {
   const [property, setProperty] = useState("");
   const getAllProperty = () => {
@@ -19,8 +19,12 @@ function ViewBox() {
         console.log(error);
       });
   };
+  
+
+
   useEffect(() => {
     getAllProperty();
+    
   }, []);
   const displayProperty = () => {
     return property ? (
@@ -37,18 +41,25 @@ function ViewBox() {
             <div><h6>CONTACT:</h6> {property.contact}</div>
             <div><h7>DATE: </h7> {property.date}</div>
             <div><img src={property.images} /></div>
-
+            <BuyProductBox/>
           </div>
 
         );
       })
-    ) : (
+      
+    ) 
+    
+    
+    
+    : (
       <h3>No data yet</h3>
     );
   }
+  
   return (
     <>
       {displayProperty()}
+
     </>
   );
 }
