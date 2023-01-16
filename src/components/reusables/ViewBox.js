@@ -29,13 +29,13 @@ function ViewBox() {
           <div className="wrapper" key={property.id}>
 
 
-            <div>{property.price}</div>
-            <div>{property.posted}</div>
-            x<div>{property.location}</div>
-            <div>{property.size}</div>
-            <div>{property.discounted}</div>
-            <div>{property.contact}</div>
-            <div>{property.date}</div>
+            <div><h1>PRICE:</h1>{property.price} </div>
+            <div><h2>POSTED: </h2>{property.posted}</div>
+            <div><h3>LOCATION:</h3> {property.location}</div>
+            <div> <h4>SIZE:</h4> {property.size}</div>
+            <div> <h5>DISCOUNT:</h5> {property.discounted}</div>
+            <div><h6>CONTACT:</h6> {property.contact}</div>
+            <div><h7>DATE: </h7> {property.date}</div>
             <div><img src={property.images} /></div>
 
           </div>

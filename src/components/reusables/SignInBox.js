@@ -1,8 +1,11 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import '../../css/reusables/signIn.css'
 
 function SignInBox() {
+    const navigator = useNavigate()
 
     const [customer, setCustomer] = useState({
         password:"",
@@ -24,8 +27,12 @@ function SignInBox() {
 
         axios.post("http://localhost:8081/customer/signIn", customer)
         .then((response) => {
-            // Logically do what you gotta do
+
+            localStorage.setItem("CredentialsUser", response.data.username)
+
             console.log(response.data)
+            navigator("/")
+
         }).catch((e) => {
             console.log(e)
         })
@@ -38,7 +45,7 @@ function SignInBox() {
             <div className="container">
                 <div className="screen">
                     <div className="screen__content">
-                        <form className="login">
+                        <div className="login">
                             <div className="login__field">
                                 <i className="login__icon fas fa-user"></i>
                                 <input placeholder="username" type="text" className="login__input" onChange={changeHandler} name="username" value={customer.username} />
@@ -54,7 +61,7 @@ function SignInBox() {
                                 <span className="button__text">Sign In Now</span>
                                 <i className="button__icon fas fa-chevron-right"></i>
                             </button>
-                        </form>
+                        </div>
                         <div className="social-login">
                             <h3>Sign In</h3>
                             <div className="social-icons">
