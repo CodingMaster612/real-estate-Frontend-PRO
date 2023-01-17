@@ -18,8 +18,8 @@ function BuyProductBox() {
     }
 
     const submitHandler = () => {
-        const propertyId=2;
-        const customerId=1;
+        const propertyId= 4;
+        const customerId = 2;
         axios.post(`http://localhost:8081/customer/purchase/${propertyId}/${customerId}`, customer)
         .then((response) => {
             // Logically do what you gotta do
@@ -32,8 +32,10 @@ function BuyProductBox() {
     }
 
     return (
+        
         <button onClick={submitHandler}>Click Me to buy house</button>
-    )
+        
+        )
 }
 
 export default BuyProductBox

@@ -18,6 +18,8 @@ function ViewBox() {
       .catch((error) => {
         console.log(error);
       });
+
+      
   };
   
 
@@ -31,8 +33,6 @@ function ViewBox() {
       property.map((property) => {
         return (
           <div className="wrapper" key={property.id}>
-
-
             <div><h1>PRICE:</h1>{property.price} </div>
             <div><h2>POSTED: </h2>{property.posted}</div>
             <div><h3>LOCATION:</h3> {property.location}</div>
