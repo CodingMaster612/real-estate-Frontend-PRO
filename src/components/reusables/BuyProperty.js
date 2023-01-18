@@ -18,11 +18,10 @@ function BuyProductBox() {
     }
 
     const submitHandler = () => {
-        const propertyId= 4;
-        const customerId = 2;
+       const propertyId= 1;
+       const customerId =1;
         axios.post(`http://localhost:8081/customer/purchase/${propertyId}/${customerId}`, customer)
         .then((response) => {
-            // Logically do what you gotta do
             console.log(response.data)
            
         }).catch((e) => {
@@ -32,9 +31,7 @@ function BuyProductBox() {
     }
 
     return (
-        
-        <button onClick={submitHandler}>Click Me to buy house</button>
-        
+        <div></div>
         )
 }
 

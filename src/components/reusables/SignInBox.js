@@ -8,8 +8,8 @@ function SignInBox() {
     const navigator = useNavigate()
 
     const [customer, setCustomer] = useState({
-        password:"",
-        username:""
+        password: "",
+        username: ""
     })
 
 
@@ -23,24 +23,27 @@ function SignInBox() {
 
     const submitHandler = () => {
 
-        
+
 
         axios.post("http://localhost:8081/customer/signIn", customer)
-        .then((response) => {
+            .then((response) => {
+                const customer = response.data
+                if (customer.isAdmin == true) {
+                    navigator('/adminPage')
+                }
+                localStorage.setItem("CredentialsUser", response.data.username)
 
-            localStorage.setItem("CredentialsUser", response.data.username)
+                // console.log(response.data)
+                navigator("/")
 
-            console.log(response.data)
-            navigator("/")
-
-        }).catch((e) => {
-            console.log(e)
-        })
+            }).catch((e) => {
+                console.log(e)
+            })
 
     }
 
     return (
-        
+
         <header style={HeaderStyle}>
             <div className="container">
                 <div className="screen">
@@ -55,8 +58,8 @@ function SignInBox() {
                                 <input placeholder="Password" type="password" className="login__input" onChange={changeHandler} name="password" value={customer.password} />
 
                             </div>
-                            
-                            <button  className="button login__submit"onClick={submitHandler}>
+
+                            <button className="button login__submit" onClick={submitHandler}>
 
                                 <span className="button__text">Sign In Now</span>
                                 <i className="button__icon fas fa-chevron-right"></i>
@@ -86,7 +89,7 @@ function SignInBox() {
 
 
 
-            
+
 
 
 
