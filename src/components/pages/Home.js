@@ -1,13 +1,12 @@
-import '../../css/reusables/Home.css'
-
+import Header from '../reusables/Header'
 
 
 function Home() {
     return (
         <header style={HeaderStyle}>
-            <div>
-
-            </div>
+        <div> 
+            <Header/>
+        </div>
         </header>
 
     );
@@ -19,6 +18,7 @@ const HeaderStyle = {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundColor: "black"
 
 
 }

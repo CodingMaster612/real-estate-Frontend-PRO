@@ -8,7 +8,9 @@ function signIn() {
         <header style={HeaderStyle}>
             <div>
                 <SignInBox/>
+                
             </div>
+            
         </header>
 
     );

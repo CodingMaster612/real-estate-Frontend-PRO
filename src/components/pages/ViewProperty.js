@@ -7,6 +7,7 @@ function View() {
         <header style={HeaderStyle}>
             <div>
             <ViewBox/>
+            
             </div>
         </header>
 

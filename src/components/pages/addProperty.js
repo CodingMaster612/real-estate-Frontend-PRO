@@ -11,8 +11,10 @@ function addProperty() {
     return (
         <header style={HeaderStyle}>
             <div>
-                <AddPropertyBox/>
+                <AddPropertyBox />
+
             </div>
+            
         </header>
 
     );

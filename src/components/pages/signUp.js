@@ -8,6 +8,7 @@ function signUp() {
         <header style={HeaderStyle}>
             <div>
             <SignUpBox />
+            
             </div>
         </header>
 
