@@ -10,6 +10,7 @@ function Header() {
                 <li><a href="/signIn">Sign In</a></li>
                 <li><a href="/signUp">SignUp</a></li>
                 <li><a href="/viewProperty">View Property</a></li>
+                <li><a href="/deleteProperty">Delete Property</a></li>
             </ul>
        
 

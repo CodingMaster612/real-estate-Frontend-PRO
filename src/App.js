@@ -4,7 +4,7 @@ import Home from "./components/pages/Home.js";
 import SignUp from "./components/pages/signUp.js";
 import AddProperty from "./components/pages/addProperty.js";
 import ViewProperty from "./components/pages/ViewProperty";
-
+import DeleteProperty from './components/pages/deleteProperty';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
           <Route path="/signUp" element={<SignUp />} />
           <Route path ="/addProperty" element={<AddProperty />} />
           <Route path="/viewProperty" element={<ViewProperty />} />
+          <Route path="/deleteProperty" element={<DeleteProperty/>} />
         </Routes>
       </BrowserRouter>
     </div>
